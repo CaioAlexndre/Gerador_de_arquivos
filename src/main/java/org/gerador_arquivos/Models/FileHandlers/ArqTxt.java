@@ -1,11 +1,13 @@
-package org.gerador_arquivos.Models;
+package org.gerador_arquivos.Models.FileHandlers;
+import org.gerador_arquivos.Models.SlqConnection;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Date;
 import java.util.Random;
 import java.util.Scanner;
-import  java.util.UUID;
+
 
 
 public class ArqTxt implements IArquivos
@@ -15,7 +17,7 @@ public class ArqTxt implements IArquivos
     protected String UsuarioC;
     protected String Caminho;
 
-    public ArqTxt(String nome,String UsuarioC,String caminho)
+    public ArqTxt(String nome, String UsuarioC, String caminho)
     {
 
         this.Nome =nome;
@@ -26,7 +28,7 @@ public class ArqTxt implements IArquivos
 
       if(Salvar(GerarId(nome,Dates.getTime()),nome,UsuarioC,caminho))
       {
-          //inicia o processo de salvar no banco de dados.
+
 
 
           System.out.println("operação concluida");
@@ -72,6 +74,9 @@ public class ArqTxt implements IArquivos
 
             System.out.println("Operação concluída");
             System.out.println(id);
+
+            SlqConnection.Conectar();
+
 
 
             return true;

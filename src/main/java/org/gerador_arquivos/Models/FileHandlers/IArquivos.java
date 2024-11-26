@@ -1,7 +1,4 @@
-package org.gerador_arquivos.Models;
-
-import java.time.LocalDateTime;
-import java.util.Locale;
+package org.gerador_arquivos.Models.FileHandlers;
 
 public interface IArquivos
 {
