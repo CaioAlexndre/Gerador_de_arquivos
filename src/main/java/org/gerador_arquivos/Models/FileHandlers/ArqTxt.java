@@ -1,5 +1,5 @@
 package org.gerador_arquivos.Models.FileHandlers;
-import org.gerador_arquivos.Models.SlqConnection;
+import org.gerador_arquivos.Models.SqlConnection;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -75,7 +75,7 @@ public class ArqTxt implements IArquivos
             System.out.println("Operação concluída");
             System.out.println(id);
 
-            SlqConnection.Conectar();
+
 
 
 
