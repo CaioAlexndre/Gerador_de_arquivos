@@ -7,10 +7,7 @@ import java.sql.SQLException;
 public class Usuario
 {
 
-    private String Nome;
-    private String Data_cadastro;
-    private int Nivel_acesso;
-    private String Email;
+
 
   //  public Usuario (Id_usuario,Nome,Data_cadastro,Nivel_acesso, Email)
    // {
