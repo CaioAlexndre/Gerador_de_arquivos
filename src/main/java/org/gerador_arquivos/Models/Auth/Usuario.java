@@ -7,18 +7,13 @@ import java.sql.SQLException;
 public class Usuario
 {
 
+    public Usuario(String nome,String email) throws SQLException
+    {
+      //insere os dados no bd.
+    }
 
-
-  //  public Usuario (Id_usuario,Nome,Data_cadastro,Nivel_acesso, Email)
-   // {
-
-
-  //  }
-
-    public Usuario(String nome,String email) throws SQLException {
-        UUID uuid = UUID.randomUUID();
-        String Id =  uuid.toString();
-        int nivel_acesso = 3;
-        OperationsDatabase.InsertWhere(Id,nome,email,nivel_acesso);
+    public static Usuario falha ()
+    {
+         throw new RuntimeException();
     }
 }

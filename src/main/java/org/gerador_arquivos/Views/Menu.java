@@ -1,6 +1,7 @@
 package org.gerador_arquivos.Views;
 
 import org.gerador_arquivos.Controllers.MenuController;
+import org.gerador_arquivos.Services.OperationsDatabase;
 
 import java.sql.SQLException;
 import java.util.Scanner;
@@ -23,8 +24,14 @@ public class Menu //uma view não pode fazer instancias de um controllador.
         if( EntradaUsuario.equals("1"))
         {
 
+            System.out.println("insira o Email");
+            String Email = Input.next();
 
-            menuController.Login();
+            System.out.println("insira Sua senha");
+            String Senha = Input.next();
+
+            menuController.Login(Email,Senha);
+
             return true;
 
         } else if (EntradaUsuario.equals("2"))
@@ -32,12 +39,16 @@ public class Menu //uma view não pode fazer instancias de um controllador.
 
             System.out.println("insira o nome ");
             String nome = Input.next();
+
             System.out.println("insira o Email");
             String Email = Input.next();
+
             System.out.println("insira Sua senha");
             String Senha = Input.next();
-            System.out.println("criando perfil");
-            menuController.Register(nome,Email);
+
+
+            System.out.println( menuController.Register(nome,Email,Senha));
+
             return true;
         }
         else
